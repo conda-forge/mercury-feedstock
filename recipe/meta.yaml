@@ -1,5 +1,5 @@
 {% set name = "mercury" %}
-{% set version = "2.0.10" %}
+{% set version = "2.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mercury-{{ version }}.tar.gz
-  sha256: 4f6a68fa2e96334aeca75ad0355df72f33378c815912afb10d8cbb184cdb2b0c
+  sha256: be96fbf3a812d58fb505da33910189794d275a09c95814d0e58606fbc3750d3b
 
 build:
   entry_points:
