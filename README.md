@@ -1,11 +1,11 @@
-About mercury
-=============
+About mercury-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mercury-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mljar/mercury
 
 Package license: AGPL-3.0-only OR LicenseRef-Mercury-Commerical
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mercury-feedstock/blob/main/LICENSE.txt)
 
 Summary: Turn Jupyter Notebook to Web App and share with non-technical users
 
