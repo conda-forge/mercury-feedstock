@@ -14,24 +14,24 @@ build:
     - mercury=mercury.mercury:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - setuptools >=50.0.0
     - wheel
     - pip
   run:
-    - python >=3.7
-    - django ==4.2
+    - python >=3.8
+    - django ==4.2.2
     - djangorestframework ==3.14.0
     - django-filter ==21.1
     - markdown ==3.3.6
     - celery ==5.1.2
     - sqlalchemy ==1.4.27
     - gevent
-    - nbconvert >=6.5.0
+    - nbconvert >=7.8.0
     - ipython_genutils
     - pyyaml ==6.0
     - django-cors-headers ==3.10.1
@@ -52,6 +52,7 @@ requirements:
     - boto3 ==1.26.83
     - cryptography
     - pyopenssl >=23.1.1
+    - bleach >=6.0.0
 
 test:
   imports:
