@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mercury-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mercury-{{ version }}.tar.gz
   sha256: 7b4b587af727648c24220f2efa255fbb5aa0042d3be4a16bc5764babfd8a357f
 
 build:
@@ -14,16 +14,16 @@ build:
     - mercury=mercury.mercury:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=50.0.0
     - wheel
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - django ==4.2.7
     - djangorestframework ==3.14.0
     - django-filter ==21.1
@@ -62,6 +62,7 @@ test:
     - mercury --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/mljar/mercury
