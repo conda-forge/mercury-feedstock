@@ -1,5 +1,5 @@
 {% set name = "mercury" %}
-{% set version = "2.4.3" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mercury-{{ version }}.tar.gz
-  sha256: 7b4b587af727648c24220f2efa255fbb5aa0042d3be4a16bc5764babfd8a357f
+  sha256: b0213b7cd1b3bd76bc43cab0c4827bd7789de75b443fb556c3bb71255837b015
 
 build:
   entry_points:
     - mercury=mercury.mercury:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
